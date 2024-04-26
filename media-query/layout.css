@@ -1,0 +1,161 @@
+/* MOBILE first */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1rem;
+    background-color: lightsalmon;
+    color: darkmagenta;
+}
+
+p, h1{
+    background-color: rgb(188, 75, 92);
+    color: white;
+}
+
+p {
+}
+h1 {
+}
+
+/* Määritellään näkymät näytön eri tiloille */
+
+.mobile {
+    background-color: darkmagenta;
+    color: lightsalmon;
+}
+.tablet {
+    background-color: blanchedalmond;
+    color: darkolivegreen;
+}
+.desktop {
+    background-color: darkgoldenrod;
+    color: lemonchiffon;
+}
+
+/* Mobile-näkymän säännöt */
+@media only screen and (min-width: 375px){
+
+    body {
+        background-color: lightsalmon;
+        color: darkmagenta;
+    }
+    .mobile{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .mobile, p{
+        font-size: 15px;
+        padding: 10px;
+    }
+    h1 {
+        background-color: transparent;
+        color: darkmagenta;
+        font-size: 15px;
+        font-weight: normal;
+        padding-top: 35px;
+        
+    }
+    p{
+        background-color: transparent;
+        color: darkmagenta;
+        font-size: 15px;
+        padding-left: 0;
+    }
+    .tablet{
+        display: none;
+    }
+    .desktop{
+       display: none;
+    }
+
+}
+
+/* Tablet-näkymän säännöt */
+@media only screen and (min-width: 426px) {
+    body {
+        background-color: darkolivegreen;
+        color: blanchedalmond;
+    }
+    .tablet{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .tablet, p{
+        font-size: 20px;
+        padding: 10px;
+    }
+    .mobile {
+        display: none;
+    }
+
+    .desktop{
+        display: none;
+    }
+
+    h1 {
+        background-color: transparent;
+        color: blanchedalmond;
+        font-size: 20px;
+        font-weight: normal;
+        padding-top: 40px;
+        
+    }
+
+    p {
+        background-color: transparent;
+        color: blanchedalmond;
+        font-size: 20px;
+        padding-left: 0;
+    }
+
+} 
+
+/*Desktop-näkymän säännöt */
+@media only screen and (min-width: 769px) {
+    body {
+        background-color: lemonchiffon;
+        color: darkgoldenrod;
+        
+    }
+    .tablet {
+        display: none;
+    }
+
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+        visibility: visible;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    h1,p {
+        color: darkgoldenrod;
+    }
+
+    h1{
+        background-color: transparent;
+        color: darkgoldenrod;
+        font-size: 20px;
+        font-weight: normal;
+        padding-top: 40px;
+    }
+}
